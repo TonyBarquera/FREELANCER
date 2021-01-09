@@ -1,0 +1,98 @@
+:root{
+    --blanco: #FFFFFF;
+    --oscuro: #212121;
+    --primario: #FFC107;
+    --secundario: #0097A7;
+    --gris: #757575;
+}
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+body{
+    font-size: 16px;
+    font-family: 'Krub', sans-serif;
+    /* 1rem = 10px */
+}
+
+.titulo {
+    text-align: center;
+    font-size: 3.8rem;
+    font-weight: normal;
+}
+
+.titulo span{
+    font-size: 1.8rem;
+}
+
+.contenedor{
+    max-width: 80rem;
+    margin: 0 auto;
+
+    /*
+        MARGEN -> top - right - bottom - left
+        margin: 0 auto 0 auto;
+
+        margin-top: 0;
+        margin-right: auto;
+        margin-bottom: 0;
+        margin-left: auto;
+    */
+}
+
+.navegacion-principal{
+    display: flex;
+    flex-direction: column;
+
+    /*
+        PADDING -> top - right - bottom - left
+    */
+}
+
+@media (min-width: 768px) {
+    .navegacion-principal{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    /*
+        480px telefono
+        768px tablet
+        1140px laptop
+        1440px 
+    */
+}
+
+.navegacion-principal a{
+    display: block;
+    text-align: center;
+    padding: 1rem;
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.navegacion-principal a:hover{
+    background-color: var(--primario);
+    color: var(--oscuro);
+    font-weight: bold;
+}
+
+.nav-bg{
+    background-color: var(--secundario);
+}
+
+.hero {
+    background-image: url(../img/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+    padding: 2rem;
+}
